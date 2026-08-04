@@ -8,8 +8,7 @@ A Verilog implementation of **Single-Cycle** and **5-Stage Pipelined** RV64I RIS
 .
 ├── pipe_processor/              # 5-stage pipelined processor implementation
 ├── seq_processor/               # Single-cycle processor implementation
-├── IPA_Pipelined_Project_Doc.pdf
-├── IPA_Sequential_Project_Doc.pdf
+├── Processor_Project_Doc.pdf
 └── README.md
 ```
 
@@ -36,10 +35,8 @@ A Verilog implementation of **Single-Cycle** and **5-Stage Pipelined** RV64I RIS
 
 ## Documentation
 
-The project specifications are included in the repository:
+The project specifications are included in the repository in the Processor_Project_Doc.pdf
 
-- `IPA_Sequential_Project_Doc.pdf`
-- `IPA_Pipelined_Project_Doc.pdf`
 
 ## Run Instructions
 
