@@ -41,3 +41,65 @@ The project specifications are included in the repository:
 - `IPA_Sequential_Project_Doc.pdf`
 - `IPA_Pipelined_Project_Doc.pdf`
 
+## Run Instructions
+
+### Sequential Processor
+
+- `proc.v` contains the complete top-level implementation of the sequential processor.
+- `seq_tb.v` is the testbench for the sequential processor.
+
+Compile and run using:
+
+```bash
+iverilog -o seq_tb seq_tb.v
+vvp seq_tb
+```
+
+- To view the simulation waveforms in **GTKWave**, add the `$dumpfile` and `$dumpvars` commands to the testbench, for example:
+
+```verilog
+initial begin
+    $dumpfile("seq.vcd");
+    $dumpvars(0, seq_tb);
+end
+```
+
+Then open the generated waveform file:
+
+```bash
+gtkwave seq.vcd
+```
+
+- After execution, the final contents of the register file will be written to `register_file.txt`.
+
+---
+
+### Pipelined Processor
+
+- `proc.v` contains the complete top-level implementation of the pipelined processor.
+- `pipe_tb.v` is the testbench for the pipelined processor.
+
+Compile and run using:
+
+```bash
+iverilog -o pipe_tb pipe_tb.v
+vvp pipe_tb
+```
+
+- To view the simulation waveforms in **GTKWave**, add the `$dumpfile` and `$dumpvars` commands to the testbench, for example:
+
+```verilog
+initial begin
+    $dumpfile("pipe.vcd");
+    $dumpvars(0, pipe_tb);
+end
+```
+
+Then open the generated waveform file:
+
+```bash
+gtkwave pipe.vcd
+```
+
+- After execution, the final contents of the register file will be written to `register_file.txt`.
+
